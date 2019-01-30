@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration
+    </title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+</head>
+    <body style="background-image: -webkit-linear-gradient(#80aaff, #d9b3ff);">
+        <div style=" margin:auto; border:1px dotted black; width:700px; border-radius: 17px; background-color: rgba(51, 102, 153,0.6);">
+            <h1 style="color:white; text-align: center ;margin-top:1px; background-color :	 #132639; margin-bottom : 0px; padding-top : 10px; padding-bottom : 10px; max-width:100%; margin-left : 0px;padding-left:50px; border-radius: 17px 17px 0px 0px;">
+            REGISTRATION
+            </h1>
+         <form action="" method="POST">
+            <div style="position: relative; margin:10px auto; width:80%;">
+                <div style="position: relative; float:left; width:40%; margin:10px 0px 10px 50px; box-sizing: border-box; ">
+                    <i class="fa fa-asterisk " style=" display:block; margin-right:16px; float:right;color:rgb(129, 1, 7); font-size:7px; margin-left:0px; border:1px,solid,black;"></i>
+                    <label style="display: block; float: right; margin-right: 3px; color:whitesmoke;">Full Name</label>
+                </div>
+                <div style="position: relative; float:left; width:40%; margin:10px auto; box-sizing: border-box; ">
+                    <input type="text" name="firstname" required placeholder="john"style="display:block; width:90%; padding-left:10px; border-radius: 4px;  ">
+                    <label style=" display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;">First Name
+                        <i class="fa fa-asterisk"style=" color:rgb(129, 1, 7); font-size:7px; margin-left:0px; border:1px,solid,black;"></i>
+                    </label>
+                    <input type="text" name="lastname" required placeholder="doe"style="display:block; width:90%; padding-left:10px; border-radius: 4px;  ">
+                    <label style=" display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;">Last Name
+                      <i class="fa fa-asterisk"style=" color:rgb(129, 1, 7); font-size:7px; margin-left:0px; border:1px,solid,black;"></i>
+                    </label>
+                </div>
+                <div style=" position: relative; float:left; width:40%; margin:10px 0px 10px 50px; box-sizing: border-box; ">
+                    <i class="fa fa-asterisk " style="display:block; margin-right:16px; float:right;color:rgb(129, 1, 7); font-size:7px; margin-left:0px; border:1px,solid,black;"></i>
+                    <label style="display: block; float: right; margin-right: 3px; color:whitesmoke;">Gender</label>
+                </div>
+                <div  style="position: relative; float:left; width:40%; margin:10px auto; box-sizing: border-box; ">
+                    <input type="radio" name="gender" value="male" checked required style="margin-bottom:10px; color:whitesmoke; border-radius: 4px;  ">
+                    <p style="display: inline; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;  "> Male</p>
+                    <br>
+                    <input type="radio" name="gender" value="female" required style="margin-bottom:10px; color:whitesmoke; border-radius: 4px;  ">
+                    <p style="display: inline; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;  ">Female</p>
+                    <br>
+                    <input type="radio" name="gender" value="other" required style="margin-bottom:10px; color:whitesmoke; border-radius: 4px;  ">
+                    <p style="display: inline; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;  ">Other</p>
+                    <br>
+                </div>
+                <div style=" position: relative; float:left; width:40%; margin:10px 0px 10px 50px; box-sizing: border-box; ">
+                    <i class="fa fa-asterisk " style="display:block; margin-right:16px; float:right;color:rgb(129, 1, 7); font-size:7px; margin-left:0px; border:1px,solid,black;"></i>
+                    <label style="display: block; float: right; margin-right: 3px; color:whitesmoke;">Email</label>
+                </div>
+                <div  style="position: relative; float:left; width:40%; margin:10px auto; box-sizing: border-box; ">
+                    <input type="email" name="email" required placeholder="john8@gmail.com" style="display:block; width:90%; padding-left:10px; border-radius: 4px;  ">
+                    <label style=" display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;">example@example.com</label>
+                </div>
+                <div style=" position: relative; float:left; width:40%; margin:10px 0px 10px 50px; box-sizing: border-box; ">
+                    <i class="fa fa-asterisk" style="display:block; margin-right:16px; float:right;color:rgb(129, 1, 7); font-size:7px; margin-left:0px; border:1px,solid,black;"></i>
+                    <label style="display: block; float: right; margin-right: 3px; color:whitesmoke;">Password</label>
+
+                </div>
+                <div  style="position: relative; float:left; width:40%; margin:10px auto; box-sizing: border-box; ">
+                    <input type="password" name="password" required  style="display:block; width:90%; padding-left:10px; border-radius: 4px;  ">
+                    <label style=" display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;">Hint:Use combination of letter and number</label>
+                </div>
+                <div style=" position: relative; float:left; width:40%; margin:10px 0px 10px 50px; box-sizing: border-box; ">
+                    <i class="fa fa-asterisk " style="display:block; margin-right:16px; float:right;color:rgb(129, 1, 7); font-size:7px; margin-left:0px; border:1px,solid,black;"></i>
+                    <label style="display: block; float: right; margin-right: 3px; color:whitesmoke;">Confirm Password</label>
+                </div>
+                <div  style="position: relative; float:left; width:40%; margin:10px auto; box-sizing: border-box; ">
+                    <input type="password" name="cpassword" required  style="display:block; width:90%; padding-left:10px; border-radius: 4px;  ">
+                    <label style=" display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;">Hint:same as password</label>
+                </div>
+                <div style=" position: relative; float:left; width:40%; margin:10px 0px 10px 50px; box-sizing: border-box; ">
+                    <i class="fa fa-asterisk " style="display:block; margin-right:16px; float:right;color:rgb(129, 1, 7); font-size:7px; margin-left:0px; border:1px,solid,black;"></i>
+                    <label style="display: block; float: right; margin-right: 3px; color:whitesmoke;">Present Address</label>
+                </div>
+                <div  style="position: relative; float:left; width:40%; margin:10px auto; box-sizing: border-box; ">
+                    <input type="text" name="streetaddress"style="display:block; width:90%; padding-left:10px; border-radius: 4px;  ">
+                    <label style=" display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;">Street Address</label>
+                    <div  style="width:40% ; margin-left:2px;margin-top:5px;  position: relative; float:left; width:40%; margin:10px 0px 10px 0px; box-sizing: border-box; ">
+                        <input type="text" name="" style="width:80%" required style=" display:block; width:90%; padding-left:10px; border-radius: 4px;  ">
+                        <label style="display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px; ">City<i class="fa fa-asterisk" style="color:rgb(129, 1, 7); font-size:7px; margin-left:0px; border:1px,solid,black;"></i>
+                        </label>
+                        <input type="text" name="zip" style="width: 80%" style="display:block; width:90%; padding-left:10px; border-radius: 4px;  ">
+                        <label style=" display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;">Postal Zip </label>
+                    </div>
+                    <div  style="width:50% ; margin-right:0px;margin-top:5px; position: relative; float:left; width:40%; margin:10px auto; box-sizing: border-box; ">
+                        <select required=""  style=" border-radius: 4px;  display:block;  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:gray; width:100%; ">
+                            <option value="">Please Select </option>
+                            <option value="United States"> United States </option>
+                            <option value="Afghanistan"> Afghanistan </option>
+                            <option value="Albania"> Albania </option>
+                            <option value="Algeria"> Algeria </option>
+                            <option value="American Samoa"> American Samoa </option>
+                            <option value="Andorra"> Andorra </option>
+                            <option value="Angola"> Angola </option>
+                            <option value="Anguilla"> Anguilla </option>
+                            <option value="Argentina"> Argentina </option>
+                            <option value="Armenia"> Armenia </option>
+                        </select>
+                        <label style=" display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;">State
+                            <i class="fa fa-asterisk" style=" color:rgb(129, 1, 7); font-size:7px; margin-left:0px; border:1px,solid,black;"></i></label>
+                        <select required=""  style=" border-radius: 4px;  display:block; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:gray; width:100%; ">
+                            <option value="">Please Select </option>
+                            <option value="United States"> United States </option>
+                            <option value="Afghanistan"> Afghanistan </option>
+                            <option value="Albania"> Albania </option>
+                            <option value="Algeria"> Algeria </option>
+                            <option value="American Samoa"> American Samoa </option>
+                            <option value="Andorra"> Andorra </option>
+                            <option value="Angola"> Angola </option>
+                            <option value="Anguilla"> Anguilla </option>
+                            <option value="Argentina"> Argentina </option>
+                            <option value="Armenia"> Armenia </option>
+                        </select>
+                        <label style="margin-bottom:4px; display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;">Country
+                            <i class="fa fa-asterisk" style=" color:rgb(129, 1, 7); font-size:7px; margin-left:0px; border:1px,solid,black;"></i>
+                        </label>
+
+                    </div>
+                </div>
+                <div style=" position: relative; float:left; width:40%; margin:10px 0px 10px 50px; box-sizing: border-box; ">
+                    <label  style="margin-right:20px;display: block; float: right; margin-right: 3px; color:whitesmoke;">Permanent Address</label>
+                </div>
+                <div  style="position: relative; float:left; width:40%; margin:10px auto; box-sizing: border-box; ">
+                    <input type="text" name="streetaddress1" style="display:block; width:90%; padding-left:10px; border-radius: 4px;  ">
+                    <label style=" display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;">Street Address</label>
+                    <div  style="width:40% ; margin-left:2px;margin-top:5px; position: relative; float:left; width:40%; margin:10px 0px 10px 0px; box-sizing: border-box; ">
+                        <input type="text" name="city1" style="width:80%" style=" border-radius: 4px;display:block; width:90%; padding-left:10px; border-radius: 4px;  ">
+                        <label style=" display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;">City</label>
+                        <input type="text" name="zip1" style="width: 80%" style=" border-radius: 4px;display:block; width:90%; padding-left:10px; border-radius: 4px;  ">
+                        <label style=" display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;">Postal Zip</label>
+                    </div>
+                    <div style="width:50% ;  border-radius: 4px;  margin-right:0px;margin-top:5px; position: relative; float:left; width:40%; margin:10px auto; box-sizing: border-box; ">
+                        <select  style=" border-radius: 4px;display:block;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:gray; width:100%; ">
+                            <option value="">Please Select </option>
+                            <option value="United States"> United States </option>
+                            <option value="Afghanistan"> Afghanistan </option>
+                            <option value="Albania"> Albania </option>
+                            <option value="Algeria"> Algeria </option>
+                            <option value="American Samoa"> American Samoa </option>
+                            <option value="Andorra"> Andorra </option>
+                            <option value="Angola"> Angola </option>
+                            <option value="Anguilla"> Anguilla </option>
+                            <option value="Antigua and Barbuda"> Antigua and Barbuda </option>
+                            <option value="Argentina"> Argentina </option>
+                            <option value="Armenia"> Armenia </option>
+                        </select>
+                        <label style=" display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;">State
+                        </label>
+                        <select  style=" border-radius: 4px;  display:block;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:gray; width:100%; ">
+                            <option value="">Please Select </option>
+                            <option value="United States"> United States </option>
+                            <option value="Afghanistan"> Afghanistan </option>
+                            <option value="Albania"> Albania </option>
+                            <option value="Algeria"> Algeria </option>
+                            <option value="American Samoa"> American Samoa </option>
+                            <option value="Andorra"> Andorra </option>
+                            <option value="Angola"> Angola </option>
+                            <option value="Anguilla"> Anguilla </option>
+                            <option value="Antigua and Barbuda"> Antigua and Barbuda </option>
+                            <option value="Argentina"> Argentina </option>
+                            <option value="Armenia"> Armenia </option>
+                        </select>
+                        <label style="margin-bottom:2px; display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;">Country
+                        </label>
+                    </div>
+                </div>
+                <div style=" position: relative; float:left; width:40%; margin:10px 0px 10px 50px; box-sizing: border-box; ">
+                    <i class="fa fa-asterisk" style="display:block; margin-right:16px; float:right;color:rgb(129, 1, 7); font-size:7px; margin-left:0px; border:1px,solid,black;"></i>
+                    <label style="display: block; float: right; margin-right: 3px; color:whitesmoke;">Phone Number</label>
+
+                </div>
+                <div  style="position: relative; float:left; width:40%; margin:10px auto; box-sizing: border-box; ">
+                    <input type="text" name="area" required style="width:45%;display:block; width:90%; padding-left:10px; border-radius: 4px;  ">
+                    <label style=" display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;">Area Code</label>
+                    <input type="tel" name="phone1" required  style="display:block; width:90%; padding-left:10px; border-radius: 4px;  ">
+                    <label style=" display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;">Mobile Number</label>
+                </div>
+                <div style=" position: relative; float:left; width:40%; margin:10px 0px 10px 50px; box-sizing: border-box; ">
+                    <label  style="margin-right:20px;display: block; float: right; margin-right: 3px; color:whitesmoke;"">Alternate Number</label>
+                </div>
+                <div  style="position: relative; float:left; width:40%; margin:10px auto; box-sizing: border-box; ">
+                    <input type="text" name="area1" style="width:45%;display:block; width:90%; padding-left:10px; border-radius: 4px;  ">
+                    <label style=" display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;">Area Code</label>
+                    <input type="tel" name="phone2"  style="display:block; width:90%; padding-left:10px; border-radius: 4px;  ">
+                    <label style=" display:block; position: relative; margin-bottom: 10px; margin-left: 3px; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;">Mobile Number</label>
+                </div>
+                <div style=" position: relative; float:left; width:40%; margin:10px 0px 10px 50px; box-sizing: border-box; ">
+                    <label style="display: block; float: right; margin-right: 3px; color:whitesmoke;">Subscribe to Newsletter?</label>
+                </div>
+                <div  style="position: relative; float:left; width:40%; margin:10px auto; box-sizing: border-box; ">
+                    <input type="radio" name="newsletter" value="Y" checked required style="margin-bottom:10px; color:whitesmoke; border-radius: 4px;  ">
+                    <p style=" display: inline; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px; ">  Yes</p>
+                    <br>
+                    <input type="radio" name="newsletter" value="N" required style="margin-bottom:10px; color:whitesmoke; border-radius: 4px;  ">
+                    <p style=" display: inline; color:whitesmoke; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:13px;    ">No</p>
+                    <br>
+                </div>
+            </div>
+            <!--end of main form element-->
+            <div style="clear:both; background-color :	 #132639; height: 40px; width:100%; margin-bottom: 2px; border-radius: 0px 0px 17px 17px;">
+                <input type="submit" value="Submit" style=" margin-left:45%;  position:relative; padding:10px; margin-right:20px; border-radius: 4px;  ">
+                <input type="reset" value="Reset"style=" position:relative; padding:10px; margin-right:20px; border-radius: 4px;  ">
+            </div>
+        </form>
+    </div>
+    <!--end of main container-->
+</body>
+
+</html>
