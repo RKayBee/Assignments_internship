@@ -2,24 +2,25 @@
 <html>
     <head>
         <title>Registration
-       </title>
+        </title>
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script defer="true" src="script.js"></script>
     </head>
     <body>
         <div class="main_container">
             <h1  id="id_2">
             REGISTRATION
             </h1>
-            <form action="" method="POST">
+            <form name="myForm"action="" method="POST" >
                  <div class="formelement">
                      <div class="leftdiv" >
                             <i class="fa fa-asterisk y"></i>
                             <label class="headlabel">Full Name</label>
                      </div>
                      <div class="rightdiv">
-                       <input type="text" name="firstname"required placeholder="john">    
+                       <input type="text" name="firstname"required placeholder="john" oninput="return validateForm()">    
                         <label class="sublabel">First Name<i class="fa fa-asterisk"></i>
                         </label>
                         <input type="text" name= "lastname"required placeholder="doe">
@@ -193,6 +194,7 @@
                         <input type="reset" value="Reset">
                 </div>
             </form> 
+            
         </div><!--end of main container-->
      </body>
    </html>

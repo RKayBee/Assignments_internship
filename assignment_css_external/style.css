@@ -1,14 +1,13 @@
-.submit,.reset{
-clear:both ;
-background-color :	 #132639; 
-height: 40px;
-width:100%;
-margin-bottom: 2px;
-border-radius: 0px 0px 17px 17px;
+.submit{
+    clear:both ;
+    background-color :#132639; 
+    height: 40px;
+    width:100%;
+    margin-bottom: 2px;
+    border-radius: 0px 0px 17px 17px;
 }
 input[type="submit"],[type="reset"]
 { 
-     position:relative;
     padding:10px;
     margin-right:20px;
 }
@@ -24,11 +23,11 @@ input[type="submit"],[type="reset"]
 }
 .main_container
 {
-  margin:auto;
+    margin:auto;
     border:1px dotted black;
     width:700px;
     border-radius: 17px;
-   background-color: rgba(51, 102, 153,0.6);
+     background-color: rgba(51, 102, 153,0.6);
 
 }
 .formelement
@@ -38,7 +37,7 @@ input[type="submit"],[type="reset"]
     width:80%;   
 }
 .leftdiv
-{
+{  
     position: relative; 
     float:left;
     width:40%;
@@ -46,10 +45,10 @@ input[type="submit"],[type="reset"]
     box-sizing: border-box;  
 }
 .rightdiv
-{
+{  
     position: relative; 
     float:left;
-  width:40%;
+    width:40%;
     margin:10px auto;
     box-sizing: border-box;   
 }
@@ -76,7 +75,7 @@ h1
 }
 .sublabel           
 {   display:block;
-   position: relative;
+    position: relative;
     margin-bottom: 10px;
     margin-left: 3px;
     color:whitesmoke;  
@@ -96,7 +95,7 @@ select{
 .fa-asterisk
 {
     color:rgb(129, 1, 7);
-  font-size:7px;
+    font-size:7px;
     margin-left:0px; 
     border:1px,solid,black;
 }
@@ -123,7 +122,7 @@ body {
 }     
 .leftleftdiv
 {
-    width:40% ;
+     width:40% ;
      margin-left:2px;
      margin-top:5px;
 }
