@@ -6,25 +6,30 @@
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script defer="true" src="script.js"></script>
-    </head>
-    <body>
+        
+       
+...    <body onload="refreshCaptcha()">
+        <div id="alertBox">
+            <span>ERROR!</span>
+            <p id="alertMessage"></p>
+            <input type="button" id="alertOkButton" onclick="hideAlertBox()" value="Ok">
+        </div>
         <div class="main_container">
             <h1  id="id_2">
             REGISTRATION
             </h1>
-            <form name="myForm"action="" method="POST" >
+            <form name="myForm"action="" method="POST" onsubmit="return validateForm()">
                  <div class="formelement">
                      <div class="leftdiv" >
                             <i class="fa fa-asterisk y"></i>
                             <label class="headlabel">Full Name</label>
                      </div>
                      <div class="rightdiv">
-                       <input type="text" name="firstname"required placeholder="john" oninput="return validateForm()">    
+                       <input type="text" name="firstName"class="inputBox" placeholder="john" oninput="validateName(this)">    
                         <label class="sublabel">First Name<i class="fa fa-asterisk"></i>
                         </label>
-                        <input type="text" name= "lastname"required placeholder="doe">
-                        <label class="sublabel">Last Name <i class="fa fa-asterisk"></i>
+                        <input type="text" name= "lastName" class="inputBox" placeholder="doe" oninput="validateName(this)">
+                        <label class="sublabel">Last Name <i class="fa fa-asterisk"></i>    
                         </label>
                        </div>
                      <div class="leftdiv">
@@ -44,7 +49,7 @@
                         <label class="headlabel">Email</label>
                      </div>
                     <div class="rightdiv">
-                        <input type="email" name="email"required placeholder="john8@gmail.com">
+                        <input type="email" pattern="[a-z]+@[a-z]+\.[a-z]{2,3}" name="email" class="inputBox" placeholder="john8@gmail.com"onblur="validateEmail(this)">
                         <label class="sublabel">example@example.com</label>
                     </div>
                     <div class="leftdiv">
@@ -53,33 +58,37 @@
                         
                     </div>
                     <div class="rightdiv">
-                        <input type="password" name="password"required>
-                        <label class="sublabel">Hint:Use combination of letter and number</label>         
+                        <input type="password" name="password" class="inputBox" id="pass"onblur="validatePassLength()" >
+                        <a href ="javascript:void(0)" class="fa fa-eye  eye" onclick="showHidePass(this)" ></a>
+                       
+                           
+                            
                     </div>
                     <div class="leftdiv">
                             <i class="fa fa-asterisk y"></i>
                             <label class="headlabel">Confirm Password</label>
                     </div>
                      <div class="rightdiv">
-                        <input type="password" name="cpassword"required>
-                       <label class="sublabel">Hint:same as password</label>
+                        <input type="password" name="cpassword" class="inputBox"onblur="validatePassEqual()" >
+                        <a href ="javascript:void(0)" class="fa fa-eye  eye" onclick="showHidePass(this)" ></a>
+                     
                      </div>
                     <div class="leftdiv">
                          <i class="fa fa-asterisk y"></i>
                         <label class="headlabel">Present Address</label>
                     </div>
                     <div class="rightdiv" >
-                        <input type="text" name="streetaddress" >
+                        <input type="text" name="streetaddress" class="inputBox">
                         <label class="sublabel">Street Address</label>
                         <div class="leftdiv leftleftdiv">
-                                <input type="text" name="city"  required >
+                                <input type="text" name="presentCity"  class="inputBox cityArea " >
                                 <label class="sublabel ">City<i class="fa fa-asterisk"></i>
                                 </label>
-                                <input type="text" name="zip" >
+                                <input type="text" name="presentZip" class="inputBox cityArea">
                                 <label class="sublabel">Postal Zip </label>
                         </div>
                         <div class="rightdiv rightrightdiv" >
-                                <select required="">
+                                <select required="" class="inputBox">
                                         <option value="">Please Select </option>
                                           <option value="United States"> United States </option>
                                           <option value="Afghanistan"> Afghanistan </option>
@@ -94,7 +103,7 @@
                                 </select> 
                                <label class="sublabel ">State or Province<i class="fa fa-asterisk"></i> 
                                 </label>  
-                                <select required="">
+                                <select required=""class="inputBox">
                                         <option value="">Please Select </option>
                                           <option value="United States"> United States </option>
                                           <option value="Afghanistan"> Afghanistan </option>
@@ -116,12 +125,12 @@
                             <label class="headlabel headlabelAdjust">Permanent Address</label>
                          </div>
                         <div class="rightdiv">
-                            <input type="text" name="streetaddress1" >
+                            <input type="text" name="streetaddress1" class="inputBox">
                             <label class="sublabel" >Street Address</label>
                             <div class="leftdiv leftleftdiv">
-                                    <input type="text" name="city1" >
+                                    <input type="text" name="permanentCity" class="inputBox cityArea">
                                     <label class="sublabel ">City</label>
-                                    <input type="text" name="zip1"  >
+                                    <input type="text" name="permanentZip" class="inputBox cityArea" >
                                 <label class="sublabel">Postal Zip</label>
                             </div>
                             <div class="rightdiv rightrightdiv">
@@ -165,18 +174,18 @@
                            
                             </div>
                             <div class="rightdiv">
-                                <input type="text" name="area" required>
+                                <input type="text" name="areaCodeMain" class="inputBox areaCode half" onblur="validateAreaCode(this)">
                                 <label class="sublabel">Area Code</label>
-                                <input type="tel" name= "phone1" required >
+                                <input type="tel" name= "phoneMain"  class="inputBox">
                                 <label class="sublabel">Mobile Number</label>
                               </div>
                             <div class="leftdiv">
                                 <label class="headlabel headlabelAdjust">Alternate Number</label>
                              </div>
                         <div class="rightdiv">
-                                    <input type="text" name="area1" >
+                                    <input type="text" name="areaCodeAlternate" class="inputBox half" onblur="validateAreaCode(this)">
                                     <label class="sublabel">Area Code</label>
-                                    <input type="tel" name= "phone2" >
+                                    <input type="tel" name= "phoneAlternate" class="inputBox">
                                     <label class="sublabel">Mobile Number</label>
                          </div>
                         <div class="leftdiv">
@@ -188,13 +197,19 @@
                                 <input type="radio" name="newsletter" value="N"required><p>No</p>
                                 <br>
                         </div>
+                        <div class=" clear" id="captcha">
+                            <input type="number" id="captchaBox"name="captchaBox" >
+                            
+                            <label id="captchaContent" name="captchaContent"></label>
+                           <input type="button" onclick ="refreshCaptcha()" id="refereshButton" value="Refresh">
+                            </div>
                 </div><!--end of main form element-->
-                <div class="submit" >
-                         <input type="submit" value="Submit"name="submit">
-                        <input type="reset" value="Reset">
+                <div class="submit clear" >
+                         <input type="submit" value="Submit"name="submit"class="finalButton">
+                        <input type="reset" value="Reset" class="finalButton">
                 </div>
-            </form> 
-            
+            </form>           
         </div><!--end of main container-->
+        <script  src="script.js"></script>
      </body>
-   </html>
+</html>
