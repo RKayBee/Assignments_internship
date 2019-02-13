@@ -1,0 +1,249 @@
+.submit
+    {
+        background-color :#132639; 
+        height: 40px;
+        width:100%;
+        margin-bottom: 2px;
+        border-radius: 0px 0px 17px 17px;
+    }
+.clear
+    {   
+       clear:both ;
+    }
+.finalButton
+    { 
+        padding:10px;
+        margin-right:20px;
+}
+#id_2 
+    {
+
+        margin-top:1px;
+        background-color :	 #132639;
+        margin-bottom : 0px;
+        padding-top : 10px;
+        padding-bottom : 10px;
+        max-width:100%;
+        margin-left : 0px;
+        
+    }
+.main_container
+    {
+        margin:auto;
+        border:1px dotted black;
+        width:700px;
+        border-radius: 17px;
+        background-color: rgba(51, 102, 153,0.6);
+
+    }
+.formelement
+    {  
+        position: relative;
+        margin:10px auto;
+        width:80%;   
+    }
+.leftdiv
+    {  
+        position: relative; 
+        float:left;
+        width:40%;
+        margin:10px 0px 10px 50px;
+        box-sizing: border-box;  
+    }
+.rightdiv
+    {  
+        position: relative; 
+        float:left;
+        width:40%;
+        margin:10px auto;
+        box-sizing: border-box;   
+    }
+.headlabel
+    {
+        display: block;
+        float: right;
+        margin-right: 3px;
+        color:whitesmoke;  
+    
+    }
+.inputBox
+    {
+        display:block;
+        width:90%;
+        padding-left:10px;
+    }
+h1
+    {
+        padding-left:50px;
+        border-radius: 17px 17px 0px 0px;
+        color:white; 
+        text-align: center;
+    }
+.sublabel           
+    {   
+        display:block;
+        position: relative;
+        margin-bottom: 10px;
+        margin-left: 3px;
+        color:whitesmoke;  
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size:13px; 
+    }
+input[type="radio"]
+    {
+        margin-bottom:10px;
+        color:whitesmoke;  
+    }
+select
+    {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color:gray;
+        width:100%;   
+    }
+.fa-asterisk
+    {
+        color:rgb(129, 1, 7);
+        font-size:7px;
+        margin-left:0px; 
+        border:1px,solid,black;
+    }
+.y
+    {  
+        display:block;
+        margin-right:16px;
+        float:right;
+    }
+p
+    {
+        display: inline;
+        color:whitesmoke;  
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size:13px;    
+    }
+.inputBox
+    {
+         border-radius: 4px;  
+    }
+body 
+    {
+        background-image: -webkit-linear-gradient(#80aaff, #d9b3ff);
+        background-image: -o-linear-gradient(#80aaff, #d9b3ff);
+    }  
+.headlabelAdjust
+    {
+         margin-right:20px;
+    }     
+.leftleftdiv
+    {
+        width:40% ;
+        margin-left:2px;
+        margin-top:5px;
+    }
+.rightrightdiv
+    {
+        width:50% ;
+        margin-right:0px;
+        margin-top:5px;
+    }
+.half /*halves the width of area code of phone*/
+    {
+         width:45%;
+    }
+input[name="submit"]
+    {
+        margin-left:40%;
+    }
+label[name="country"]
+    {
+         margin-bottom:2px;
+    }
+.cityArea
+    {
+        width:80%;
+    }
+.eye
+    {   
+        position:absolute;
+        color:#132639;
+        display:none;
+        top:0px;
+        margin-left:190px;
+        padding: 2px;
+    }
+#captcha
+    {
+        background-color:#132639;
+        height:80px;
+        width:250px;
+        position:relative;
+        margin:auto;
+        border-radius: 2px;
+    }
+#refereshButton
+    {
+        position:absolute;
+        top:0px;
+        right:0px;
+
+    }
+
+#captchaBox
+    {
+        position:absolute;
+        top:25px;
+        left:5px;
+        padding-left:65px;
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+
+#captchaContent
+    {
+        font-size: 20px;
+        background-color: pink;
+        display: block;
+        position: absolute;
+        top: 32px;
+        left: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+#alertBox
+{   
+    border-radius: 10px;
+    height:100px;
+    width:200px;
+    opacity: 0.5;
+    background-color: #132639;
+    position:fixed;
+    top:20px;
+    left:20px;
+    transition: opacity 2s ease-in-out;
+    opacity:0;
+ }
+#alertOkButton
+{
+    display: block;
+    position:absolute;
+    bottom:0px;
+    margin-left:40%;
+    margin-bottom:5%;
+    border-radius: 5px;
+
+}
+#alertMessage
+{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    padding:5px;
+}
+span
+{
+    color:red;
+    display:block;
+    position: relative;
+    top:2%;
+    left:40%;
+    font-weight: bolder;
+   text-decoration: underline;
+}
