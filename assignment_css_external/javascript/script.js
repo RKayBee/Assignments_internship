@@ -17,7 +17,73 @@
     var  phoneAlternate=document.forms["myForm"]["phoneAlternate"];
     var  alertBox=document.getElementById("alertBox");
     var  alertMessage=document.getElementById("alertMessage");
+    var submitButton=document.querySelector("#submitButton");
+    var eye= document.querySelectorAll(".eye");
+    var captchaRefreshButton=document.querySelector("#refreshButton");
+    var body=document.querySelector("body");
+    var alertOkButton=document.querySelector("#alertOkButton");
+    var form=document.querySelector("form");
    //global variable
+   //eventListenersm
+   form.onsubmit = validateForm;
+
+    alertOkButton.addEventListener("click",hideAlertBox);
+   body.onload=refreshCaptcha;
+    captchaRefreshButton.addEventListener("click",refreshCaptcha);
+   eye[0].addEventListener("click",function()
+   {
+    showHidePass(eye[0]);
+   });
+   eye[1].addEventListener("click",function()
+   {
+    showHidePass(eye[1]);
+   });
+  // submitButton.addEventListener("click",function()
+  // {
+  //   return  validateForm();
+  // });
+   lastName.addEventListener("input",function()
+   {
+    validateName(lastName);
+   });
+   firstName.addEventListener("input",function()
+   {
+    validateName(firstName);
+   });
+   password.addEventListener("blur",validatePassLength);
+   password.addEventListener("input",function(){
+     eyeVisible(eye[0]);
+   });
+   confirmPassword.addEventListener("blur",validatePassEqual);
+  confirmPassword.addEventListener("input",function(){
+    eyeVisible(eye[1]);
+  });
+   email.addEventListener("blur",function(){
+     validatePattern(email);
+   });
+   phoneMain.addEventListener("blur",function()
+   {
+     validateNumber(phoneMain);
+   });
+  areaCodeMain.addEventListener("blur",function()
+   {
+     validateNumber(areaCodeMain);
+   });
+  areaCodeAlternate.addEventListener("blur",function()
+   {
+     validateNumber(areaCodeAlternate);
+   });
+
+   phoneAlternate.addEventListener("blur",function()
+   {
+    validateNumber(phoneAlternate);
+   });
+   presentCity.addEventListener("blur",function()
+   {
+     validateName(presentCity);
+   });
+
+//function definition begining
 function validateName(element) 
   {
    
@@ -33,6 +99,7 @@ function validateName(element)
         return true;
       } 
   }//end of validatName()
+
   function validateNumber(element) 
   {
    
@@ -51,8 +118,7 @@ function validateName(element)
     
 function validatePassEqual()//checks both password and confirm password are same or not
    {
-      var eye = document.querySelectorAll(".eye");//makes eye icon visible
-      eye[1].style.display="inline-block";
+     
       if(confirmPassword.value!= password.value )
         { 
           errorDisplay("confirm password and password should be same");
@@ -65,10 +131,15 @@ function validatePassEqual()//checks both password and confirm password are same
         return true;
        }
     }//end of validate Pass Equal
+    function eyeVisible(eye)
+    {
+    //makes eye icon visible
+      eye.style.display="inline-block";
+    }
+
  function validatePassLength()//checks for min password length is 8 characters or not
     {
-      var eye= document.querySelectorAll(".eye");//makes eye icon visible
-      eye[0].style.display="inline-block";
+     
       if(password.value.length<5)
         {
           errorDisplay("password must be 5 characters minimum");
@@ -82,6 +153,7 @@ function validatePassEqual()//checks both password and confirm password are same
          }
     }
  //end of password validation
+ 
  function showHidePass(eye)//toggle between show and hide password on clicking eye icon
  {
     var parent=eye.parentElement;
@@ -97,36 +169,39 @@ function validatePassEqual()//checks both password and confirm password are same
       eye.className=eye.className.replace("fa-eye-slash","fa-eye");
      }
   }//end of show pass 
- function validateEmail(email)//email validation
+ 
+  function validatePattern(element)//pattern validation
  { 
-   if(email.validity.patternMismatch)
+   if(element.validity.patternMismatch)
     {
-      errorDisplay("email should be in correct format");
-      email.style["border-color"]="#ffb3b3";//changes input box color red in error
+      errorDisplay(element.nextElementSibling.innerText+ " "+"[pattern mismatch]");
+      element.style["border-color"]="#ffb3b3";//changes input box color red in error
       return false;   
     }
    else
    {
-    email.style["border-color"]="#fff";//changes input box color white if no error occurs
+    element.style["border-color"]="#fff";//changes input box color white if no error occurs
     return true;
     }
   }
+ 
 //  areacode validation
- function validateAreaCode(element)
- {
-   var pattern = new RegExp("\d{1,3}(\-(\d{3,4}))?")
-   if(!pattern.test(element))
-   {
-     errorDisplay("pattern mismatch(eg:83,977,12-342,1-435)");
-     element.style["border-color"]="#ffb3b3";//changes input box color red in error
-     return false;
-   }
-   else
-   {
-    element.style["border-color"]="#fff";//changes input box color white if no error occurs
-    return true;
-   }
- }
+//  function validateAreaCode(element)
+//  {
+//   //  var pattern = new RegExp("\d{1,3}(\-(\d{3,4}))?");
+//   //  if(!pattern.test(element))
+//   if(element.validity.patternMismatch)
+//    {
+//      errorDisplay("pattern mismatch(eg:83,977,12-342,1-435)");
+//      element.style["border-color"]="#ffb3b3";//changes input box color red in error
+//      return false;
+//    }
+//    else
+//    {
+//     element.style["border-color"]="#fff";//changes input box color white if no error occurs
+//     return true;
+//    }
+//  }
 //  addition of captcha
  
 
@@ -158,6 +233,7 @@ function generateCaptcha(temp1,temp2,index,operator)//generates final captchaCon
   }//end of second if
   label.innerText=temp1+operator[index]+temp2+"=";
 }//end of function generateCaptcha
+
 function validateCaptcha()//calculates if captcha value is correct or incorrect
 {   
     if(Number(captchaValue.value)===eval(label.innerText.substring(0,3)))
@@ -173,6 +249,7 @@ function validateCaptcha()//calculates if captcha value is correct or incorrect
         return false;
       }
 }//end of validateCaptcha
+
 function validateForm()//validation of full form ,called on form submit
 {
     if(firstName.value=="")
@@ -219,7 +296,13 @@ function validateForm()//validation of full form ,called on form submit
         confirmPassword.focus();
         return false;
        }
-    if(!validateEmail(email))
+    if(email.value=="")
+    {
+      errorDisplay("email cannot be empty");
+      email.focus();
+      return false;
+    }
+    if(!validatePattern(email))
        {
         email.focus();
         return false;
@@ -238,11 +321,11 @@ function validateForm()//validation of full form ,called on form submit
       if(permanentCity.value!="")
       {
       if(!validateName(permanentCity))
-      {  
+        {  
         permanentCity.focus();
         return false;
+        }
       }
-    }
      if (presentZip.value !="")
      {
        if(!validateNumber(presentZip))
@@ -265,25 +348,38 @@ function validateForm()//validation of full form ,called on form submit
        areaCodeMain.focus();
        return false;
      }
+     if (!validateNumber(areaCodeMain))
+    {
+      areaCodeMain.focus();
+      return false;
+    }
+    if(areaCodeAlternate.value!="")
+    {
+      if (!validateNumber(areaCodeMain))
+      {
+        areaCodeMain.focus();
+        return false;
+      }
+    }
      if(phoneMain.value =="")
      {
        errorDisplay("main phone cannot be null ");
        phoneMain.focus();
        return false;
      }
-     if(!validateNumber(phoneMain))
+     if(!validatePattern(phoneMain))
        {
          phoneMain.focus();
          return false;
        }
        if (phoneAlternate.value !="")
-     {
-       if(!validateNumber(phoneAlternate))
-       {
-         phoneAlternate.focus();
-         return false;
+      {
+         if(!validatePattern(phoneAlternate))
+        {
+            phoneAlternate.focus();
+            return false;
+         }
        }
-     }
     if(captchaValue.value=="")
     {
       errorDisplay("captcha cannot be empty");
@@ -294,29 +390,18 @@ function validateForm()//validation of full form ,called on form submit
         captchaValue.focus();
         return false;
       }  
-    if (!validateAreaCode(areaCodeMain))
-    {
-      areaCodeMain.focus();
-      return false;
-    }
-    if(areaCodeAlternate.value!="")
-    {
-      if (!validateAreaCode(areaCodeMain))
-      {
-        areaCodeMain.focus();
-        return false;
-      }
-  }
 }//end of validateForm
- 
- function errorDisplay(message)
- {
-  alertBox.style.display="block";
-  alertMessage.innerHTML=message;
-  alertBox.style.opacity=1;
-  setTimeout(hideAlertBox, 3000)
- }
- function hideAlertBox()
- {
-   alertBox.style.opacity=0;
- }
+
+function errorDisplay(message)//the box in which errors are displayed
+  {
+    alertBox.style.display="block";
+    alertMessage.innerHTML=message;
+    alertBox.style.opacity=1;
+    setTimeout(hideAlertBox, 3000)
+}
+
+
+function hideAlertBox()//on click of alertOkButton it is called to hide the box
+  {
+     alertBox.style.opacity=0;
+}

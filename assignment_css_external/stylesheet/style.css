@@ -127,6 +127,7 @@ p
 body 
     {
         background-image: -webkit-linear-gradient(#80aaff, #d9b3ff);
+        background-image: -o-linear-gradient(#80aaff, #d9b3ff);
     }  
 .headlabelAdjust
     {
